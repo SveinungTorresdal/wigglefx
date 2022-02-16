@@ -5,7 +5,7 @@
 </script>
 
 <div id="wiggle-effects" class="min-vh-100 min-vw-100 d-flex flex-column">
-	<nav class="navbar navbar-light bg-light px-4 border-bottom">
+	<nav class="navbar navbar-light px-4 border-bottom">
 		<a class="navbar-brand" href=".">
 			Wiggle✨Fx
 		</a>
@@ -17,9 +17,7 @@
 	</nav>
 
 	<main class="d-flex flex-row align-items-stretch flex-grow-1">
-		<div class="w-75 d-flex align-items-center justify-content-center flex-grow-1">
-			<Canvas class="mh-100 w-75 bg-dark border-0 rounded" />
-		</div>
+		<Canvas class="flex-grow-1 mh-100 w-100 bg-light" canvas-class="w-75 bg-dark rounded" />
 		<Menu class="w-25 border-start" />
 	</main>
 	
