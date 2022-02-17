@@ -17,7 +17,7 @@
 	</nav>
 
 	<main class="d-flex flex-row align-items-stretch flex-grow-1">
-		<Canvas class="flex-grow-1 mh-100 w-100 bg-light" canvas-class="w-75 bg-dark rounded" />
+		<Canvas class="flex-grow-1 mh-100 w-100 bg-light" canvas-class="w-75 bg-secondary rounded" />
 		<Menu class="w-25 border-start" />
 	</main>
 	

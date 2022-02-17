@@ -2,12 +2,13 @@
 	import Accordion from './utils/Accordion.svelte'
 	import AccordionItem from './utils/AccordionItem.svelte'
 	import CanvasConfig from './canvas/CanvasConfig.svelte';
+    import SceneConfig from './scene/SceneConfig.svelte'
 
     let added = ''
     export { added as class }
 </script>
 
-<aside class="p-4 {added}">
+<aside class="p-4 overflow-auto {added}">
     <h2>
         Wiggle✨Fx
     </h2>
@@ -20,12 +21,7 @@
             <CanvasConfig />
         </AccordionItem>
         <AccordionItem id="scene" title="🖼 Scene" shown>
-            <div class="d-flex flex-row align-items-center">
-                <input class="form-control" type="text" placeholder="Scene name" aria-label="Enter a scene name">
-                <button class="btn btn-success ms-3">
-                    Add
-                </button>
-            </div>
+            <SceneConfig />
         </AccordionItem>
         <AccordionItem id="load" title="📋 Import">
             <label for="importFile" class="form-label">Load existing <strong>Wiggle✨Fx</strong> from JSON file.</label>
