@@ -8,6 +8,7 @@
         const { sceneName } = Object.fromEntries(formData.entries())
         
         const scene: SceneInterface = {
+            name: sceneName.toString(),
             current: undefined,
             sceneitems: []
         }
@@ -26,7 +27,7 @@
 {#each $effect.scenes as scene}
 <div class="card mt-3">
     <ul class="list-group list-group-flush">
-        <Scene />
+        <Scene {scene} />
     </ul>
 </div>
 {/each}

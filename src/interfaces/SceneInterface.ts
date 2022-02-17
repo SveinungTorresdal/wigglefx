@@ -1,7 +1,7 @@
 import type SceneItemInterface from './SceneItemInterface'
 
 export interface SceneInterface {
-    name?: string
+    name: string
     current?: SceneItemInterface
     sceneitems?: Array<SceneItemInterface>
 }
