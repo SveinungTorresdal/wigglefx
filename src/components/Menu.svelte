@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Accordion from './utils/Accordion.svelte'
 	import AccordionItem from './utils/AccordionItem.svelte'
 	import CanvasConfig from './canvas/CanvasConfig.svelte';

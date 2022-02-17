@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Canvas from './components/canvas/Canvas.svelte'
 	import Menu from './components/Menu.svelte'
 	import Timeline from './components/Timeline.svelte'

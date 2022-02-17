@@ -1,5 +1,5 @@
-<script>
-    import { width, height } from '../../store/canvas.store'
+<script lang="ts">
+    import { canvas } from '../../store/canvas.store'
 </script>
 
 <div class="row">
@@ -8,7 +8,7 @@
             Width of canvas
         </label>
         <div class="input-group">
-            <input id="canvas-config-width" type="text" class="form-control" placeholder="Width" aria-label="The width of the canvas" bind:value={$width}>
+            <input id="canvas-config-width" type="text" class="form-control" placeholder="Width" aria-label="The width of the canvas" bind:value={$canvas.w}>
             <span class="input-group-text">px</span>
         </div>
     </div>
@@ -17,7 +17,7 @@
             Height of canvas
         </label>
         <div class="input-group">
-            <input id="canvas-config-height" type="text" class="form-control" placeholder="Height" aria-label="The height of the canvas" bind:value={$height}>
+            <input id="canvas-config-height" type="text" class="form-control" placeholder="Height" aria-label="The height of the canvas" bind:value={$canvas.h}>
             <span class="input-group-text">px</span>
         </div>
     </div>

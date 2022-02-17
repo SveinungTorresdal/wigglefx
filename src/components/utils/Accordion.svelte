@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import { setContext } from 'svelte';
     import { key } from '../../context/accordion.context'
 

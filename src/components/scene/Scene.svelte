@@ -1,17 +1,17 @@
-<script>
+<script lang="ts">
     import Canvas from "../canvas/Canvas.svelte";
 
-    export let id = Math.random().toString(36).substring(7)
+    export let id: string = Math.random().toString(36).substring(7)
 </script>
 
 <li class="list-group-item p-0">
     <Canvas
         {id}
-        class="card-img-top w-100 m-0 p-4 bg-light"
+        class="card-img-top w-100 m-0 p-2 bg-light"
         canvas-class="bg-secondary w-100 h-auto rounded-1"
         slot-class="d-flex flex-column justify-content-end align-items-center"
     >
-        <nav class="d-flex flex-row justify-content-around">
+        <nav class="d-flex flex-row justify-content-around m-1">
             <div class="btn-group m-2" role="group" aria-label="Basic example">
                 <button class="btn btn-light">
                     <i class="bi bi-bookmark"></i>
