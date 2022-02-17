@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Scene as SceneInterface } from '../../interfaces/scene'
+    import type SceneInterface from '../../interfaces/SceneInterface'
     import Scene from './Scene.svelte'
     import effect from '../../store/effect.store'
 

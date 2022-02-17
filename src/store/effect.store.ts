@@ -1,7 +1,7 @@
 import { writable } from "svelte/store"
-import type Effect from "../interfaces/effect"
+import type EffectInterface from "../interfaces/EffectInterface"
 
-let n: Effect = {
+let n: EffectInterface = {
     scene: undefined,
     scenes: []
 }
@@ -11,7 +11,7 @@ if (storage) {
     n = JSON.parse(storage)
 }
 
-export const effect = writable<Effect>(n)
+export const effect = writable<EffectInterface>(n)
 
 export default effect
 
