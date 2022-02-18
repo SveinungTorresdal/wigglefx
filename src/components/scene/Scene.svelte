@@ -7,7 +7,14 @@
     export let scene: SceneInterface
     export let id: string = Math.random().toString(36).substring(7)
 
-    const deleteScene = () => $effect.scenes = $effect.scenes.filter(obj => obj.name !== scene.name)
+    const setScene = () => $effect.scene = $effect.scenes.find(obj => obj.name === scene.name)
+    const deleteScene = () => {
+        const isActive = scene.name === $effect.scene?.name
+        if (isActive) {
+            $effect.scene = undefined
+        }
+        $effect.scenes = $effect.scenes.filter(obj => obj.name !== scene.name)
+    }
 </script>
 
 <li class="list-group-item p-0">
@@ -19,8 +26,12 @@
     >
         <nav class="d-flex flex-row justify-content-around m-1">
             <div class="btn-group m-2" role="group" aria-label="Basic example">
-                <button class="btn btn-light">
+                <button class="btn btn-light" on:click={setScene}>
+                    {#if scene.name === $effect.scene?.name}
+                    <i class="bi bi-bookmark-check-fill"></i>
+                    {:else}
                     <i class="bi bi-bookmark"></i>
+                    {/if}
                 </button>
                 <button class="btn btn-light">
                     <i class="bi bi-pencil-square"></i>

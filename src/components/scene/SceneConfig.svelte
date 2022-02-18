@@ -14,6 +14,7 @@
         }
 
         $effect.scenes = [ ...$effect.scenes, scene ]
+        $effect.scene = scene
     }
 </script>
 
@@ -24,10 +25,12 @@
     </button>
 </form>
 
-{#each $effect.scenes as scene}
+{#if $effect.scenes.length}
 <div class="card mt-3">
     <ul class="list-group list-group-flush">
+        {#each $effect.scenes as scene}
         <Scene {scene} />
+        {/each}
     </ul>
 </div>
-{/each}
+{/if}

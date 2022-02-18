@@ -1,7 +1,8 @@
 import type TransformationInterface from './TransformationInterface'
 
 export interface SceneItemInterface {
-    file?: string
+    filepath: string
+    file: string
     transformations?: Array<TransformationInterface>
 }
 
